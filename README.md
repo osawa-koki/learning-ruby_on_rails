@@ -1,6 +1,6 @@
 # learning-ruby_on_rails
 
-日本人エンジニアの基礎教養としての"Ruby on Rails"を学習する。  
+🌱🌱🌱 日本人エンジニアの基礎教養としての"Ruby on Rails"を学習する。  
 
 以下の2つの技術を使用する。  
 
