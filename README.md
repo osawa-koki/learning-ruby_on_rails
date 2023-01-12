@@ -15,3 +15,13 @@
 docker compose up db -d
 docker compose up web -d
 ```
+
+`docker compose up db -d`コマンドでPostgreSQLデータベースを作成。  
+これを実行した段階で、ローカル(ホスト)マシンに接続しているため、ローカルからデータベースにアクセス可能。  
+
+| 設定 | 設定値 |
+| ---- | ---- |
+| host | localhost |
+| port | 5432 |
+| user | rails_study |
+| password | password |
