@@ -25,3 +25,10 @@ docker compose up web -d [--build]
 | port | 5432 |
 | user | rails_study |
 | password | password |
+
+---
+
+次に、`docker compose up web -d`を実行する。  
+これでRailsサーバが立ち上がる。  
+
+自分用メモとして、初回時は`docker-compose run web rails new . --force --no-deps --database=postgresql`コマンドで、イロイロなデータを作成した。  
