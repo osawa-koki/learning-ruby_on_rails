@@ -12,8 +12,8 @@
 以下のコマンドを順に実行する。  
 
 ```shell
-docker compose up db -d
-docker compose up web -d
+docker compose up db -d [--build]
+docker compose up web -d [--build]
 ```
 
 `docker compose up db -d`コマンドでPostgreSQLデータベースを作成。  
