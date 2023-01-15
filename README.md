@@ -38,4 +38,5 @@ docker compose up web -d [--build]
 ```shell
 # モデルの作成
 rails generate model <モデル名>
+# docker-compose run web rails generate model <モデル名>
 ```
