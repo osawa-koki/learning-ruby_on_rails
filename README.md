@@ -44,3 +44,10 @@ rails generate model <モデル名>
 rails generate controller <コントローラ名> <メソッド名>
 # docker-compose run web rails generate controller <コントローラ名> <メソッド名>
 ```
+
+マイグレーションをするには、、、  
+
+```shell
+rails db:migrate RAILS_ENV=development
+docker compose run web rails db:migrate RAILS_ENV=development
+```
