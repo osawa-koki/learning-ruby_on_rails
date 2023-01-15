@@ -6,6 +6,11 @@ class PostsController < ApplicationController
   def new
   end
 
+  def create
+    Post.create(name: params[:name], content: params[:content])
+    redirect_to("/posts/index")
+  end
+
   def confirm
   end
 
