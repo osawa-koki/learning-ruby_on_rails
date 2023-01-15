@@ -1,6 +1,6 @@
 FROM ruby:3.1.3
 
-RUN apt update -qq && apt install -y postgresql-client
+RUN apt update -qq && apt install -y postgresql-client nodejs
 WORKDIR /myapp
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
