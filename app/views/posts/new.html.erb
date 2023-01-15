@@ -1,2 +1,16 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>新規投稿作成</h1>
+<%= form_tag("/posts/create") do %>
+  <div class="form">
+    <div class="form-body">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your name</label>
+        <input type="text" class="form-control" id="name" placeholder="osawa koki" />
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Enter content</label>
+        <textarea class="form-control" id="content" rows="5" name="content"></textarea>
+      </div>
+      <div class="center"><input class="btn btn-primary" type="submit" value="投稿" /></div>
+    </div>
+  </div>
+<%end%>
