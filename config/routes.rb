@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # get "URL" => "コントローラー名#アクション名"
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
