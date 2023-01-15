@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'index/index'
   devise_for :users
-  # get "URL" => "コントローラー名#アクション名"
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
