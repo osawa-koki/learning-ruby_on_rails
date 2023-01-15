@@ -11,7 +11,8 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
-  def confirm
+  def edit
+    @post = Post.find_by(id: params[:id])
   end
 
   def detail

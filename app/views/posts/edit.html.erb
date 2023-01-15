@@ -1,0 +1,16 @@
+<h1>投稿の編集</h1>
+<%= form_tag("/posts/edit/#{@post.id}") do %>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>ユーザ名</th>
+        <td><input class="form-control" value="<%= @post.name %>" /></td>
+      </tr>
+      <tr>
+        <th>投稿</th>
+        <td><textarea class="form-control" rows="5" value="<%= @post.content %>"></textarea></td>
+      </tr>
+      <tr><th colspan="2"><div class="center"><input class="btn btn-primary" type="submit" value="更新" /></div></th></tr>
+    </tbody>
+  </table>
+<%end%>
