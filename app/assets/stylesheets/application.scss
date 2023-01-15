@@ -22,3 +22,24 @@ main {
   margin-left: auto;
   padding: 1rem;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin-top: 1rem;
+  background-color: lightgray;
+  a {
+    color: #0E6DFE;
+    text-decoration: none;
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
