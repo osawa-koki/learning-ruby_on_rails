@@ -1,0 +1,42 @@
+<h1>マイページ</h1>
+<%= form_tag("/mypage/update") do %>
+  <% if @error != nil %>
+    <div class="alert alert-danger" role="alert">
+      <%= @error %>
+    </div>
+  <% end %>
+  <% if @success != nil %>
+    <div class="alert alert-info" role="alert">
+      <%= @success %>
+    </div>
+  <% end %>
+  <table class="table">
+    <tr>
+      <th>名前</th>
+      <td><input name="user[name]" type="text" class="form-control" value="<%= @user.name %>" /></td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><input name="user[email]" type="email" class="form-control" value="<%= @user.email %>" /></td>
+    </tr>
+    <tr>
+      <th>ひとことコメント</th>
+      <td><textarea name="user[comment]" class="form-control" rows="5"><%= @user.comment %></textarea></td>
+    </tr>
+    <tr>
+      <th>誕生日</th>
+      <td><input name="user[birthday]" type="date" class="form-control" value="<%= @user.birthday %>" /></td>
+    </tr>
+    <tr>
+      <th>登録日</th>
+      <td><input class="form-control" value="<%= @user.created_at %>" disabled /></td>
+    </tr>
+    <tr>
+      <th>更新日</th>
+      <td><input class="form-control" value="<%= @user.updated_at %>" disabled /></td>
+    </tr>
+    <tr>
+      <th colspan="2"><div class="center"><input type="submit" class="btn btn-primary" value="更新" /></div></th>
+    </tr>
+  </table>
+<%end%>

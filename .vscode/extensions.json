@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "hridoy.rails-snippets",
+    "editorconfig.editorconfig",
+    "mhutchie.git-graph",
+    "github.copilot",
+    "eamodio.gitlens",
+    "davidanson.vscode-markdownlint"
+  ]
+}
