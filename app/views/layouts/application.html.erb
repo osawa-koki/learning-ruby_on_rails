@@ -17,6 +17,7 @@
         {name: "投稿作成", path: "/posts/new", with_session: true, without_session: true},
         {name: "ログイン", path: "/users/sign_in", with_session: false, without_session: true},
         {name: "サインアップ", path: "/users/sign_up", with_session: false, without_session: true},
+        {name: "マイページ", path: "/users/show", with_session: true, without_session: false},
         {name: "ログアウト", path: destroy_user_session_path, with_session: true, without_session: false},
       ]
     %>
