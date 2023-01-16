@@ -13,10 +13,11 @@
   <body>
     <%
       pages = [
-        {name: "投稿一覧", path: "/posts/index"},
-        {name: "投稿作成", path: "/posts/new"},
-        {name: "ログイン", path: "/users/sign_in"},
-        {name: "サインアップ", path: "/users/sign_up"},
+        {name: "投稿一覧", path: "/posts/index", with_session: true, without_session: true},
+        {name: "投稿作成", path: "/posts/new", with_session: true, without_session: true},
+        {name: "ログイン", path: "/users/sign_in", with_session: false, without_session: true},
+        {name: "サインアップ", path: "/users/sign_up", with_session: false, without_session: true},
+        {name: "ログアウト", path: destroy_user_session_path, with_session: true, without_session: false},
       ]
     %>
 
@@ -29,11 +30,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <% pages.each do |page| %>
-              <li class="nav-item">
-                <%= link_to(page[:name], page[:path], {class: "nav-link active"}) %>
-              </li>
+              <% if page[:with_session] && user_signed_in? || page[:without_session] && !user_signed_in? %>
+                <li class="nav-item">
+                  <%= link_to(page[:name], page[:path], {class: "nav-link"}) %>
+                </li>
+              <% end %>
             <% end %>
           </ul>
+          <%= user_signed_in? %>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
