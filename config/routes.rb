@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "posts/edit/:id" => "posts#edit"
   post "posts/update/:id" => "posts#update"
   get "posts/delete/:id" => "posts#delete"
+  get "mypage/index" => "mypage#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
