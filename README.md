@@ -2,10 +2,18 @@
 
 🌱🌱🌱 日本人エンジニアの基礎教養としての"Ruby on Rails"を学習する。  
 
+基礎的な部分とよく使用しそうなユーザ認証をDeviseを使用して実装する。  
+
 以下の2つの技術を使用する。  
 
 - Ruby on Rails
 - PostgreSQL
+
+![成果物](./.development/img/fruit.gif)  
+
+> **Warning**  
+> あくまでも"Ruby on Rails"に触れることを目的としているため、セキュリティ対策は未実装です。  
+> 具体的にはXSS攻撃の脆弱性やユーザの入力値の未検証などの問題点があります。  
 
 ## 実行方法
 
@@ -49,5 +57,5 @@ rails generate controller <コントローラ名> <メソッド名>
 
 ```shell
 rails db:migrate RAILS_ENV=development
-docker compose run web rails db:migrate RAILS_ENV=development
+# docker compose run web rails db:migrate RAILS_ENV=development
 ```
